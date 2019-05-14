@@ -33,6 +33,20 @@ elseif ($temp<50){
 else{
     echo "il fait trés chaud";
 }
+echo "<hr>";
+$jourSemaine = 'mardi';
+
+switch ($jourSemaine) {
+    case 'Vendredi':
+        echo'C\'est bientôt le weekend :) ';
+       break;
+    case 'Samedi':
+    case 'dimanche':
+        echo 'Nous sommes le weekend';
+        break;
+    default :
+        echo"Ce n'est pas le weekend";
+}
 ?>
 
 </body>
