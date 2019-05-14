@@ -62,6 +62,13 @@ echo "<ul>";
     }
 echo "</ul>";
 
+    $fruits=["pamplemousses","pommes","poires"];
+
+    echo "<ul>";
+        foreach ($fruits as $i){
+            echo "<li>$i</li>";
+        }
+    echo "</ul>";
 ?>
 
 </body>
