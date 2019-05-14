@@ -47,6 +47,12 @@ switch ($jourSemaine) {
     default :
         echo"Ce n'est pas le weekend";
 }
+
+echo "<ul>";
+    for ($i = 0; $i < 10; $i++){
+        echo "<li>Puce $i</li>";
+    }
+echo "</ul>";
 ?>
 
 </body>
