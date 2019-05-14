@@ -53,6 +53,15 @@ echo "<ul>";
         echo "<li>Puce $i</li>";
     }
 echo "</ul>";
+
+echo "<ul>";
+    $i = 0;
+    while ($i < 10){
+        echo "<li>Puce $i</li>";
+        $i++;
+    }
+echo "</ul>";
+
 ?>
 
 </body>
