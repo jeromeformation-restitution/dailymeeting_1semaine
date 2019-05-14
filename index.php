@@ -20,6 +20,19 @@ echo $tata;
 echo "<br>";
 echo (int)$titi;
 
+$temp=55;
+if ($temp<=0){
+  echo "il fait froid";
+}
+elseif ($temp<=20){
+    echo "il fait moyen";
+}
+elseif ($temp<50){
+    echo "il fait chaud";
+}
+else{
+    echo "il fait trés chaud";
+}
 ?>
 
 </body>
