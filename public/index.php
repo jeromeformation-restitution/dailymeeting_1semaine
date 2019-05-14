@@ -62,11 +62,38 @@ echo "</ul>";
             echo "<li>$i</li>";
         }
     echo "</ul>";
+  $table = [ "firstname"=>"john","lastname" => "doe", "age" => 41]
+
 ?>
 
+<table>
+    <thead>
+    <tr>
+        <?php
+        foreach ($table as $key =>$i){
+            echo "<th>$key</th>";
+        }
+      ?>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <?php
+        foreach ($table as $i){
+            echo "<td>$i</td>";
+        }
+        ?>
+    </tr>
+
+
+    </tbody>
+
+
+</table>
 
 <script src="js/jquery-3.4.1.min.js"></script>
 <script src="js/bootstrap.bundle.min.js"></script>
+
 
 </body>
 </html>
