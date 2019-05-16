@@ -1,6 +1,6 @@
 <?php
 require ('inc/header.php');
-var_dump($_POST);
+require ('exo_matin.php');
 
 ?>
 
