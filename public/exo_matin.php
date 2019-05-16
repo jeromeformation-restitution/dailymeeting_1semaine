@@ -30,12 +30,30 @@ if (!empty($_POST)) {
     }
 
 
+    // Le prix
 
+    if(!array_key_exists('prix', $_POST)) {
+        var_dump("Merci d'entrer une valeur");
+    } elseif ($_POST['prix'] === '') {
+        var_dump("Valeur non reconnue");
+    } elseif(!is_numeric($_POST['prix'])) {
+        var_dump('valeur inccorect');
+    } else {
+        $_POST['prix'] = floatval ($_POST['prix']);
+        if ($_POST['prix'] < 0) {
+            var_dump("Le prix ne peut-être inférieur à 0");
+        }
+        if ($_POST['prix'] > 1000) {
+            var_dump("Le prix ne peut-être supérieur à 1000€");
+        }
+    }
 
-
-
-
-
+    if(!array_key_exists('publication', $_POST)){
+        $_POST['publication'] = false;
+    } else {
+        $_POST['publication'] = true;
+    }
+var_dump($_POST);
 
 
 
