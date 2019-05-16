@@ -1,7 +1,7 @@
 <?php
 require ('inc/header.php');
 require ('exo_matin.php');
-
+var_dump($_SERVER);
 ?>
 
 <main class="container">

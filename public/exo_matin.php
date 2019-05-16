@@ -1,6 +1,6 @@
 <?php
 
-if (!empty($_POST)) {
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
     var_dump($_POST);
 
     ///LE NOM
@@ -65,6 +65,21 @@ var_dump($_POST);
             var_dump("veuillez entrer une date correct");
         }elseif (!checkdate($alex[1], $alex[2], $alex[0])){
             var_dump("veuillez entrer une date correct!");
+        }
+    }
+    if(!array_key_exists('nombre', $_POST)) {
+        var_dump("Merci d'entrer un nombre de vues");
+    } elseif ($_POST['nombre'] === '') {
+        var_dump("Le nombre de vues est nul !");
+    } elseif(!is_numeric($_POST['nombre'])) {
+        var_dump('valeur incorrecte du nombre de vues');
+    } else {
+        $_POST['nombre'] = intval ($_POST['nombre']);
+        if ($_POST['nombre'] < 0) {
+            var_dump("Le nombre de vues ne peut-être inférieur à 0");
+        }
+        if ($_POST['nombre'] > 19E19) {
+            var_dump("Le nombre de vue ne peut-être supérieur à 19E19");
         }
     }
 
