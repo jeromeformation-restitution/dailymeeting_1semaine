@@ -55,8 +55,17 @@ if (!empty($_POST)) {
     }
 var_dump($_POST);
 
-
-
-
+    if (!array_key_exists("date", $_POST)) {
+        var_dump("veuillez définir une 'key'");
+    } elseif ($_POST['date'] === '') {
+        var_dump("veuillez entrer une date");
+    } else{
+        $alex = explode("-", $_POST['date']);
+        if (sizeof($alex) !== 3){
+            var_dump("veuillez entrer une date correct");
+        }elseif (!checkdate($alex[1], $alex[2], $alex[0])){
+            var_dump("veuillez entrer une date correct!");
+        }
+    }
 
 }
