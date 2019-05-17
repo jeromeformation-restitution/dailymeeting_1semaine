@@ -10,7 +10,7 @@ require ('recup_info.php');
     <form action="" method="post">
         <div>
             <label for="lettre">Saisir ici : </label>
-            <input type="text" id="lettre" name="lettre" autofocus>
+            <input type="text" id="lettre" name="lettre" autofocus maxlength="1" required>
         </div>
 
         <button type="submit" class="btn btn-primary">Soumettre</button>
